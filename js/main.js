@@ -57,18 +57,18 @@ var toLatLong = function() {
 
 
 var checkLatLong = function() {
-  var latitude = document.getElementById('latitude');
-  var longitude = document.getElementById('longitude');
+  var latitude = document.getElementById('latitude').value;
+  var longitude = document.getElementById('longitude').value;
   //create latlng object
   var latlng = new google.maps.LatLng(parseFloat(latitude), parseFloat(longitude));
   
   if (latitude, longitude !== null && latitude,longitude !== "") {
     if (latlng !== null) {
-      console.log('not null');
+      //console.log('not null');
       latlng.k = parseFloat(latitude);
       latlng.D = parseFloat(longitude);
-      console.log(latlng.k + ',' + latlng.D);
-      console.log('latlng');
+      //console.log(latlng.k + ',' + latlng.D);
+      //console.log(latlng);
       geocoder.geocode({'latLng': latlng}, function(results, status) {
         if (status === google.maps.GeocoderStatus.OK) {
             var returned = results;
