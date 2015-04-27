@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Geocoder</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row text-center">
+      <div class="columns twelve">
+        <h1>geocoder</h1>
+      </div>
+    </div>
+    
+    <form>
+      <div class="row">
+        <div class="columns twelve">
+          <label for="address">address</label>
+          <input type="text" class="u-full-width" id="address" placeholder="address">
+        </div>
+      </div>
+      
+      <br>
+      
+      <div class="row">
+        <div class="columns six">
+          <label for="latitude">latitude</label>
+          <input type="text" id="latitude" class="u-full-width" placeholder="latitude">
+        </div>
+        
+        <div class="columns six">
+          <label for="longitude">longitude</label>
+          <input type="text" id="longitude" class="u-full-width" placeholder="longitude">
+        </div>
+      </div>
+      
+      <br>
+      
+      <div class="row">
+        <div class="columns twelve">
+          <label for="coordinate">coordinate</label>
+          <input type="text" id="coordinate" class="u-full-width" placeholder="coordinate">
+        </div>
+      </div>
+    </form>
+    
+    <div class="row">
+      <div class="columns six">
+        <center>
+          <button onClick="toLatLong()">address to coordinate</button>
+        </center>
+      </div>
+      
+      <div class="columns six">
+        <center>
+          <button onClick="toAddress()">coordinates to address</button>
+        </center>
+      </div>
+    </div>
+    
+    <br>
+    
+    <div class="row">
+      <div class="columns twelve">
+        <div id="possible" class="text-center">
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places,&?key=AIzaSyBp0nmZCAM-boGTpZAgysRNBDPi7N25M8Y"></script>
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

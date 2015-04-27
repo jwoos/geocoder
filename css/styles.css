@@ -1,0 +1,19 @@
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#possible {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ecf0f1;
+  border-radius: 10px;
+}
