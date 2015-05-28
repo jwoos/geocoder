@@ -11,7 +11,7 @@ var checkAddress = function() {
     geocoder.geocode({'address': address}, function(results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
         var returned = results;
-        //console.log(returned);
+        console.log(returned);
         
         if (returned.length > 1) {
           for (i = 0; i < returned.length; i++) {
@@ -26,7 +26,7 @@ var checkAddress = function() {
           alert('there seems to have been multiple matches, refine your query and try again');
         } else {
           document.getElementById('address').value = returned[0].formatted_address;
-          //console.log(returned[0].geometry.location.k + ',' + returned[0].geometry.location.D);
+          console.log(returned[0].geometry.location.k + ',' + returned[0].geometry.location.D);
           document.getElementById('latitude').value = returned[0].geometry.location.k;
           document.getElementById('longitude').value = returned[0].geometry.location.D;
           document.getElementById('coordinate').value = returned[0].geometry.location.k + ',' + returned[0].geometry.location.D;
@@ -67,12 +67,12 @@ var checkLatLong = function() {
       //console.log('not null');
       latlng.k = parseFloat(latitude);
       latlng.D = parseFloat(longitude);
-      //console.log(latlng.k + ',' + latlng.D);
-      //console.log(latlng);
+      console.log(latlng.k + ',' + latlng.D);
+      console.log(latlng);
       geocoder.geocode({'latLng': latlng}, function(results, status) {
         if (status === google.maps.GeocoderStatus.OK) {
             var returned = results;
-            //console.log(returned);
+            console.log(returned);
             
             document.getElementById('address').value = returned[0].formatted_address;
           } else {
@@ -84,7 +84,7 @@ var checkLatLong = function() {
       geocoder.geocode({'latLng': latlng}, function(results, status) {
         if (status === google.maps.GeocoderStatus.OK) {
           var returned = results;
-          //console.log(returned);
+          console.log(returned);
           
           document.getElementById('address').value = returned[0].formatted_address;
         } else {
