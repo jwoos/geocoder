@@ -26,10 +26,10 @@ var checkAddress = function() {
           alert('there seems to have been multiple matches, refine your query and try again');
         } else {
           document.getElementById('address').value = returned[0].formatted_address;
-          console.log(returned[0].geometry.location.k + ',' + returned[0].geometry.location.D);
-          document.getElementById('latitude').value = returned[0].geometry.location.k;
-          document.getElementById('longitude').value = returned[0].geometry.location.D;
-          document.getElementById('coordinate').value = returned[0].geometry.location.k + ',' + returned[0].geometry.location.D;
+          console.log(returned[0].geometry.location.A + ',' + returned[0].geometry.location.F);
+          document.getElementById('latitude').value = returned[0].geometry.location.A;
+          document.getElementById('longitude').value = returned[0].geometry.location.F;
+          document.getElementById('coordinate').value = returned[0].geometry.location.A + ',' + returned[0].geometry.location.F;
         }
       } else {
         alert('geocode was not successful for the following reasons: ' + status);
@@ -67,7 +67,7 @@ var checkLatLong = function() {
       //console.log('not null');
       latlng.k = parseFloat(latitude);
       latlng.D = parseFloat(longitude);
-      console.log(latlng.k + ',' + latlng.D);
+      console.log(latlng.A + ',' + latlng.F);
       console.log(latlng);
       geocoder.geocode({'latLng': latlng}, function(results, status) {
         if (status === google.maps.GeocoderStatus.OK) {
